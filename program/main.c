@@ -1,16 +1,17 @@
 #include "stdio.h"
 #include "hurricane/hurricane.h"
 
+#include "glad/glad.h"
+#include "GLFW/glfw3.h"
+
 int main() {
-    int* coordinate_buffer = hcn_get_coordinate_buffer();
+    HURRICANE_WINDOW window = hurricane_window_create();
 
-    hcn_app_start();
-    hcn_update();
-    while (hcn_application_running())
-    {
+    while(!hurricane_window_should_close(window)) {
 
+        hurricane_window_update(window);
     }
 
-    hcn_terminate();
-    printf("Application has terminated\n");
+    hurricane_window_destroy(window);
+    return 0;
 }

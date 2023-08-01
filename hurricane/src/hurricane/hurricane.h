@@ -1,14 +1,13 @@
 #ifndef HURRICANE_H_
 #define HURRICANE_H_
 
-int* hcn_app_start();
-int hcn_application_running();
+typedef void* HURRICANE_WINDOW;
 
-int hcn_draw_triangle();
-void hcn_update();
-void hcn_terminate();
-int* hcn_get_coordinate_buffer();
-void rain();
+HURRICANE_WINDOW hurricane_window_create();
+void hurricane_window_destroy(HURRICANE_WINDOW window);
 
+int hurricane_window_should_close(HURRICANE_WINDOW window);
+
+void hurricane_window_update(HURRICANE_WINDOW window);
 #endif
 
