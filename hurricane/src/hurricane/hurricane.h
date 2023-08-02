@@ -21,3 +21,5 @@ void hurricane_window_update(HURRICANE_WINDOW* window);
 void hurricane_io_process_input(HURRICANE_WINDOW* window);
 #endif
 
+// hurricane_shader.c
+const char* hurricane_load_shader(const char* filepath);
