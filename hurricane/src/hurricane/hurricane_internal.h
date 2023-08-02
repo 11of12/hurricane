@@ -17,6 +17,8 @@ typedef struct {
     uint32_t screen_width;
     uint32_t screen_height;
 
+    unsigned int shader_program;
+
     const char* vertex_shader;
     const char* fragment_shader;
 } HURRICANE_WINDOW;

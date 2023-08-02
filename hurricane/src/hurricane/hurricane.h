@@ -22,4 +22,11 @@ void hurricane_io_process_input(HURRICANE_WINDOW* window);
 #endif
 
 // hurricane_shader.c
-const char* hurricane_load_shader(const char* filepath);
+const char* hurricane_shader_parse_file(const char* filepath);
+int hurricane_shader_compile(HURRICANE_WINDOW* window, const char** vertex_shader_source, const char** fragment_shader_source);
+
+// hurricane_render.c
+void hurricane_test_draw_triangle(HURRICANE_WINDOW* window);
+void hurricane_render_update(HURRICANE_WINDOW* window);
+
+void hurricane_render_clear(HURRICANE_WINDOW* window);

@@ -41,6 +41,8 @@ const char* default_fragment_shader = "#version 330 core\n"
     window->screen_width = default_screen_width;
     window->screen_height = default_screen_height;
     window->title = default_title;
+
+    //printf("%p\n", &window->vertex_shader);
 }
 
 void _framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -87,6 +89,8 @@ HURRICANE_WINDOW* hurricane_window_create() {
 
     glfwSetFramebufferSizeCallback(window->window, _framebuffer_size_callback);
 
+    window->shader_program = hurricane_shader_compile(window, &(window->vertex_shader), &(window->fragment_shader));
+
     return window;
 }
 void hurricane_window_destroy(HURRICANE_WINDOW* window) {
@@ -98,9 +102,4 @@ int hurricane_window_should_close(HURRICANE_WINDOW* window) {
     return glfwWindowShouldClose(window->window);
 }
 
-void hurricane_window_update(HURRICANE_WINDOW* window) {
-    glClear(GL_COLOR_BUFFER_BIT);
-    glfwSwapBuffers(window->window);
-    glfwPollEvents();
-}
 
