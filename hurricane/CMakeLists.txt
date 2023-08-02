@@ -1,6 +1,8 @@
 add_library(
     hurricane
     src/hurricane/hurricane.c
+    src/hurricane/hurricane_window.c
+    src/hurricane/hurricane_io.c
     src/hurricane/hurricane.h
     )
 

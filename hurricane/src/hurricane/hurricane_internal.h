@@ -1,0 +1,6 @@
+#ifndef HURRICANE_INTERNAL_H
+#define HURRICANE_INTERNAL_H
+
+typedef void* HURRICANE_WINDOW;
+
+#endif
