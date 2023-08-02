@@ -24,7 +24,6 @@ HURRICANE_WINDOW* hurricane_window_create() {
         return NULL;
     }
 
-
     int WINDOW_WIDTH = 500;
     int WINDOW_HEIGHT = 500;
     
