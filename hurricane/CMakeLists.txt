@@ -2,6 +2,7 @@ add_library(
     hurricane
     src/hurricane/hurricane_window.c
     src/hurricane/hurricane_render.c
+    src/hurricane/exercises.c
     src/hurricane/hurricane_io.c
     src/hurricane/hurricane_shader.c
     src/hurricane/hurricane.h

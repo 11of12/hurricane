@@ -26,7 +26,23 @@ const char* hurricane_shader_parse_file(const char* filepath);
 int hurricane_shader_compile(HURRICANE_WINDOW* window, const char** vertex_shader_source, const char** fragment_shader_source);
 
 // hurricane_render.c
-void hurricane_test_draw_triangle(HURRICANE_WINDOW* window);
 void hurricane_render_update(HURRICANE_WINDOW* window);
-
 void hurricane_render_clear(HURRICANE_WINDOW* window);
+
+// exersises.c
+void learn_opengl_hello_triangle_setup(HURRICANE_WINDOW* window);
+void learn_opengl_hello_triangle(HURRICANE_WINDOW* window);
+void learn_opengl_hello_triangle_cleanup(HURRICANE_WINDOW* window);
+
+void learn_opengl_ex1_setup(HURRICANE_WINDOW* window);
+void learn_opengl_ex1(HURRICANE_WINDOW* window);
+void learn_opengl_ex1_cleanup(HURRICANE_WINDOW* window);
+
+void learn_opengl_ex2_setup(HURRICANE_WINDOW* window);
+void learn_opengl_ex2(HURRICANE_WINDOW* window);
+void learn_opengl_ex2_cleanup(HURRICANE_WINDOW* window);
+
+void learn_opengl_ex3_setup(HURRICANE_WINDOW* window);
+void learn_opengl_ex3(HURRICANE_WINDOW* window);
+void learn_opengl_ex3_cleanup(HURRICANE_WINDOW* window);
+//void learn_opengl_hello_triangle_ex1(HURRICANE_WINDOW* window);

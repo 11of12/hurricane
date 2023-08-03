@@ -17,7 +17,10 @@ typedef struct {
     uint32_t screen_width;
     uint32_t screen_height;
 
-    unsigned int shader_program;
+    unsigned int* shader_programs;
+    unsigned int* vertex_buffer_objects;
+    unsigned int* vertex_array_objects;
+    unsigned int* element_buffer_objects;
 
     const char* vertex_shader;
     const char* fragment_shader;

@@ -88,12 +88,21 @@ HURRICANE_WINDOW* hurricane_window_create() {
     hurricane_window_set_background_color(window->window, 1.0f, 1.0f, 1.0f, 1.0f);
 
     glfwSetFramebufferSizeCallback(window->window, _framebuffer_size_callback);
+    
+    // To-do handle creating the size of the array better
+    window->vertex_buffer_objects = malloc(sizeof(unsigned int) * 512);
+    window->vertex_array_objects = malloc(sizeof(unsigned int) * 512);
+    window->element_buffer_objects = malloc(sizeof(unsigned int) * 512);
 
-    window->shader_program = hurricane_shader_compile(window, &(window->vertex_shader), &(window->fragment_shader));
+    window->shader_programs = malloc(sizeof(unsigned int) * 512);
+    window->shader_programs[0] = hurricane_shader_compile(window, &(window->vertex_shader), &(window->fragment_shader));
 
     return window;
 }
 void hurricane_window_destroy(HURRICANE_WINDOW* window) {
+    free(window->vertex_buffer_objects);
+    free(window->vertex_array_objects);
+    free(window->element_buffer_objects);
     free(window);
     glfwTerminate();
 }
