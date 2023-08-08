@@ -9,4 +9,4 @@ add_library(
     )
 
 target_include_directories(hurricane PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
-target_link_libraries(hurricane PRIVATE glfw glad)
+target_link_libraries(hurricane PRIVATE glfw glad m)

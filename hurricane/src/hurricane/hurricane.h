@@ -46,3 +46,8 @@ void learn_opengl_ex3_setup(HURRICANE_WINDOW* window);
 void learn_opengl_ex3(HURRICANE_WINDOW* window);
 void learn_opengl_ex3_cleanup(HURRICANE_WINDOW* window);
 //void learn_opengl_hello_triangle_ex1(HURRICANE_WINDOW* window);
+void personal_circle_setup(HURRICANE_WINDOW* window);
+void personal_circle(HURRICANE_WINDOW* window, double x_pos, double y_pos, unsigned int num_triangles);
+void personal_circle_cleanup(HURRICANE_WINDOW* window);
+void personal_circle_io(HURRICANE_WINDOW* window, double *x_pos, double *y_pos, unsigned int *num_triangles, double delta_time);
+

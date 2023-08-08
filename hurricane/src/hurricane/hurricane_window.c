@@ -45,8 +45,7 @@ const char* default_fragment_shader = "#version 330 core\n"
     //printf("%p\n", &window->vertex_shader);
 }
 
-void _framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
+void _framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0,0, width, height);
 }
 
@@ -99,6 +98,7 @@ HURRICANE_WINDOW* hurricane_window_create() {
 
     return window;
 }
+
 void hurricane_window_destroy(HURRICANE_WINDOW* window) {
     free(window->vertex_buffer_objects);
     free(window->vertex_array_objects);
